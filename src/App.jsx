@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TokenGeneration from "./components/TokenGeneration";
 import Analytics from "./components/Analytics";
 import Monitoring from "./components/Monitoring";
 import Payments from "./components/Payments";
 import Maintenance from "./components/Maintenance";
-import TokenGeneration from "./components/TokenGeneration";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
