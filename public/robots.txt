@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fridgerepair.netlify.app/sitemap.xml
