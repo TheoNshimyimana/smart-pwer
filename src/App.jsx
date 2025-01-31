@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
+// import Dashboard from "./components/Dashboard";
 import Monitoring from "./components/Monitoring";
 import Analytics from "./components/Analytics";
 import Payments from "./components/Payments";
 import Maintenance from "./components/Maintenance";
 import TokenGeneration from "./components/TokenGeneration";
 import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
+import Navbar from "./Components/Navbar";
+import Dashboard from "./Components/Dashboard";
+// import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
