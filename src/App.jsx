@@ -1,14 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import Dashboard from "./components/Dashboard";
-import Monitoring from "./components/Monitoring";
 import Analytics from "./components/Analytics";
+import Monitoring from "./components/Monitoring";
 import Payments from "./components/Payments";
 import Maintenance from "./components/Maintenance";
 import TokenGeneration from "./components/TokenGeneration";
 import Sidebar from "./components/Sidebar";
-import Navbar from "./Components/Navbar";
-import Dashboard from "./Components/Dashboard";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import Dashboard from "./components/Dashboard";
 
 const App = () => {
   return (
@@ -30,7 +28,10 @@ const App = () => {
               <Route path="/usage-analytics" element={<Analytics />} />
               <Route path="/payment-management" element={<Payments />} />
               <Route path="/fault-detection" element={<Maintenance />} />
-              <Route path="/tariff-optimization" element={<TokenGeneration />} />
+              <Route
+                path="/tariff-optimization"
+                element={<TokenGeneration />}
+              />
             </Routes>
           </main>
         </div>
