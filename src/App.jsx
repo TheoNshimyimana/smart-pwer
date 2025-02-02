@@ -7,6 +7,10 @@ import Maintenance from "./components/Maintenance";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
+import ForgotPassword from "./Pages/ForgotPassword";
+import Login from "./Pages/Login";
+import ResetPassword from "./Pages/ResetPassword";
+import Signup from "./Pages/Signup";
 
 const App = () => {
   return (
@@ -21,8 +25,12 @@ const App = () => {
           <Navbar />
 
           {/* Main Content Below Navbar */}
-          <main className="p-6 flex-grow overflow-auto">
+          <main className=" flex-grow overflow-auto">
             <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/reset-password" element={<ResetPassword />} />
               <Route path="/home" element={<Dashboard />} />
               <Route path="/real-time-monitoring" element={<Monitoring />} />
               <Route path="/usage-analytics" element={<Analytics />} />
