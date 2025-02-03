@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, AlertCircle } from "lucide-react";
+import { Search, } from "lucide-react";
 import { Doughnut, Bar } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from "chart.js";
 import Mtn from "../assets/mtn.jpg";
@@ -8,7 +8,7 @@ import Airtel from "../assets/airtel.png";
 
 ChartJS.register(ArcElement, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
 
-const PaymentOptions = () => {
+function PaymentOptions ()  {
   const [totalKiloWatts, setTotalKiloWatts] = useState(45);
   const [remainingKiloWatts, setRemainingKiloWatts] = useState(22);
   

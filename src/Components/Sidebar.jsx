@@ -12,7 +12,10 @@ const Sidebar = () => {
     { name: "Usage Analytics and Insights", path: "/usage-analytics" },
     { name: "Payment Management and Alerts", path: "/payment-management" },
     { name: "Fault Detection and Maintenance", path: "/fault-detection" },
-    { name: "Tariff Optimization and Incentives", path: "/tariff-optimization" },
+    {
+      name: "Tariff Optimization and Incentives",
+      path: "/tariff-optimization",
+    },
   ];
 
   return (
@@ -30,8 +33,6 @@ const Sidebar = () => {
 
       {/* Sidebar Content */}
       <div className="relative z-10 flex flex-col h-full pl-6 pt-20">
-        
-
         {/* Navigation Links */}
         <nav className="flex-grow ">
           {menuItems.map((item) => (

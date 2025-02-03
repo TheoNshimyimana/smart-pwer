@@ -24,7 +24,7 @@ ChartJS.register(
   ArcElement
 );
 
-const Monitoring = () => {
+function Monitoring() {
   const weeklyData = {
     labels: [
       "Monday",
@@ -41,14 +41,12 @@ const Monitoring = () => {
         data: [30, 34, 28, 35, 33, 25, 40],
         borderColor: "#E63946",
         backgroundColor: "rgba(230, 57, 70, 0.5)",
-        
       },
       {
         label: "Remaining",
         data: [13, 37, 15, 40, 37, 30, 30],
         borderColor: "#2A9D8F",
         backgroundColor: "rgba(42, 157, 143, 0.5)",
-        
       },
     ],
   };
@@ -96,7 +94,11 @@ const Monitoring = () => {
     <div className=" p-4 bg-white ">
       {/* Summary Cards */}
       <div className="grid grid-cols-3 gap-4 mb-6">
-        <Card title="Total Payments" value="Rwf. 20,000" className="bg-red-800" />
+        <Card
+          title="Total Payments"
+          value="Rwf. 20,000"
+          className="bg-red-800"
+        />
         <Card title="Total KiloWatts" value="60" className="bg-blue-100" />
         <Card title="Remaining KiloWatts" value="22" className="bg-green-100" />
       </div>
@@ -107,7 +109,10 @@ const Monitoring = () => {
 
         {/* Line Chart */}
         <div className="h-40">
-          <Line data={weeklyData} options={{ responsive: true, maintainAspectRatio: false }} />
+          <Line
+            data={weeklyData}
+            options={{ responsive: true, maintainAspectRatio: false }}
+          />
         </div>
 
         {/* Charts */}
@@ -125,7 +130,10 @@ const Monitoring = () => {
               <h3 className="text-sm font-semibold text-center pb-5">
                 Monthly Usage
               </h3>
-              <Line data={monthlyUsageData} options={{ responsive: true, maintainAspectRatio: false }} />
+              <Line
+                data={monthlyUsageData}
+                options={{ responsive: true, maintainAspectRatio: false }}
+              />
             </div>
           </div>
           <div className="flex justify-center mt-6">
@@ -140,6 +148,6 @@ const Monitoring = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Monitoring;

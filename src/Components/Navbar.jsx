@@ -1,7 +1,6 @@
 import { useState } from "react";
-// import Modal from "./Modal";  // Import Modal component
-import Login from "../Pages/Login";  // Import Login component
-import Signup from "../Pages/Signup";  // Import Signup component
+import Login from "../Pages/Login";  
+import Signup from "../Pages/Signup";  
 import Modal from "./Modal";
 
 function Navbar() {
