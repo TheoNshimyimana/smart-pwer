@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Login from "../Pages/Login";  
-import Signup from "../Pages/Signup";  
-import Modal from "./Modal";
+import Login from "../Pages/LoginPage";
+import Signup from "../Pages/SignupPage";
+import Modal from "./ModalPop";
 
 function Navbar() {
   const [isModalVisible, setIsModalVisible] = useState(false);

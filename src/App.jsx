@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Analytics from "./components/Analytics";
-import Monitoring from "./components/Monitoring";
-import Payments from "./components/Payments";
-import Maintenance from "./components/Maintenance";
-import Navbar from "./components/Navbar";
-import Dashboard from "./components/Dashboard";
-import ForgotPassword from "./Pages/ForgotPassword";
-import Login from "./Pages/Login";
-import ResetPassword from "./Pages/ResetPassword";
-import Signup from "./Pages/Signup";
+import Sidebar from "./components/SidebarLeft";
+import Analytics from "./components/AnalyticsAndInsights";
+import Monitoring from "./components/MonitoringAndControl";
+import Payments from "./components/PaymentManagement";
+import Maintenance from "./components/MaintenanceAndDetection";
+import Navbar from "./components/NavbarHeader";
+import ForgotPassword from "./Pages/ForgotPasswd";
+import Login from "./Pages/LoginPage";
+import ResetPassword from "./Pages/ResetPasswod";
+import Signup from "./Pages/SignupPage";
+import Dashboard from "./components/DashbordHome";
 
 const App = () => {
   return (

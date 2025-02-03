@@ -1,4 +1,4 @@
-import Card from "./ui/Card"; // Importing the Card component
+import Card from "./interface.jsx/Cards"; // Importing the Card component
 import { Line, Doughnut } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -38,13 +38,13 @@ function Monitoring() {
     datasets: [
       {
         label: "Used",
-        data: [30, 34, 28, 35, 33, 25, 40],
+        data: [30, 34, 28, 35, 25, 25, 40],
         borderColor: "#E63946",
         backgroundColor: "rgba(230, 57, 70, 0.5)",
       },
       {
         label: "Remaining",
-        data: [13, 37, 15, 40, 37, 30, 30],
+        data: [13, 37, 15, 40, 17, 40, 30],
         borderColor: "#2A9D8F",
         backgroundColor: "rgba(42, 157, 143, 0.5)",
       },

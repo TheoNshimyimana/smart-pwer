@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import Modal from "../components/Modal";
+import Modal from "../components/ModalPop";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -41,14 +41,20 @@ function Login() {
               </div>
             </div>
             <div className="submit-container">
-              <button type="submit" className="submit">Login</button>
+              <button type="submit" className="submit">
+                Login
+              </button>
             </div>
           </form>
         </div>
       </div>
 
       {/* Modal */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="Login Confirmation">
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Login Confirmation"
+      >
         <p>Are you sure you want to proceed with login?</p>
       </Modal>
     </>
