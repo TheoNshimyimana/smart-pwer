@@ -1,4 +1,4 @@
-import Card from "./interface.jsx/Cards"; // Importing the Card component
+import Card from "./interface/Cards"; 
 import { Line, Doughnut } from "react-chartjs-2";
 import {
   Chart as ChartJS,

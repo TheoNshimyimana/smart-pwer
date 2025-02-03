@@ -4,12 +4,13 @@ import Analytics from "./components/AnalyticsAndInsights";
 import Monitoring from "./components/MonitoringAndControl";
 import Payments from "./components/PaymentManagement";
 import Maintenance from "./components/MaintenanceAndDetection";
-import Navbar from "./components/NavbarHeader";
+// import Navbar from "./components/NavbarHeader";
 import ForgotPassword from "./Pages/ForgotPasswd";
 import Login from "./Pages/LoginPage";
 import ResetPassword from "./Pages/ResetPasswod";
 import Signup from "./Pages/SignupPage";
 import Dashboard from "./components/DashbordHome";
+import TariffOptimization from "./components/TariffOptimization";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
         {/* Main Content Area */}
         <div className="flex flex-col flex-grow">
           {/* Navbar at the Top */}
-          <Navbar />
+          {/* <Navbar /> */}
 
           {/* Main Content Below Navbar */}
           <main className=" flex-grow overflow-auto">
@@ -30,11 +31,12 @@ const App = () => {
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset-password" element={<ResetPassword />} />
-              <Route path="/home" element={<Dashboard />} />
+              <Route path="/" element={<Dashboard />} />
               <Route path="/real-time-monitoring" element={<Monitoring />} />
               <Route path="/usage-analytics" element={<Analytics />} />
               <Route path="/payment-management" element={<Payments />} />
               <Route path="/fault-detection" element={<Maintenance />} />
+              <Route path="/tariff-optimization" element={<TariffOptimization />} />
             </Routes>
           </main>
         </div>

@@ -7,7 +7,7 @@ const Sidebar = () => {
   const [activeItem, setActiveItem] = useState("Usage Analytics and Insights");
 
   const menuItems = [
-    { name: "Home", path: "/home" },
+    { name: "Home", path: "/" },
     { name: "Real-time Monitoring and Control", path: "/real-time-monitoring" },
     { name: "Usage Analytics and Insights", path: "/usage-analytics" },
     { name: "Payment Management and Alerts", path: "/payment-management" },
