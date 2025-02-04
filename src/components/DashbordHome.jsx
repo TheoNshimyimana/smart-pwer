@@ -5,24 +5,25 @@ import bgImage from "../assets/Bgg.webp";
 import { IoPower } from "react-icons/io5";
 import { HiLightBulb } from "react-icons/hi";
 import { FcElectricity } from "react-icons/fc";
-import { MdElectricBolt } from "react-icons/md";
+// import { MdElectricBolt } from "react-icons/md";
+
+import { Switch } from "@headlessui/react";
+// import { Lightbulb } from "lucide-react";
+
+
+const rooms = ["KITCHEN", "DINING ROOM", "LIVING ROOM", "GARAGE", "BEDROOM"];
 
 function Dashboard ()  {
-  // Light control state
-  const [lights, setLights] = useState({
-    kitchen: false,
-    dining: false,
-    living: false,
-    garage: false,
-    bedroom: false,
+  const [enabled, setEnabled] = useState({
+    KITCHEN: true,
+    "DINING ROOM": true,
+    "LIVING ROOM": true,
+    GARAGE: false,
+    BEDROOM: false,
   });
 
-  // Function to toggle light state
-  const toggleLight = (room) => {
-    setLights((prevLights) => ({
-      ...prevLights,
-      [room]: !prevLights[room],
-    }));
+  const toggleSwitch = (room) => {
+    setEnabled((prev) => ({ ...prev, [room]: !prev[room] }));
   };
 
   return (
@@ -161,34 +162,35 @@ function Dashboard ()  {
           </section>
         </div>
 
-        {/* Lights Card */}
-        <div className="shadow bg-white rounded-lg hover:shadow-xl transition-shadow">
-          <main className="uppercase leading-10 p-6 text-sm">
-            <div className="flex gap-4">
-              <HiLightBulb size={40} className="text-slate-400" />
-              <h1 className="text-sm text-slate-400 font-semibold mt-2 pb-10">
-                Lights
-              </h1>
-            </div>
+        {/*  text-slate-400 pb-14 font-semibold mt-2 */}
 
-            {/* Light Switches */}
-            {Object.keys(lights).map((room) => (
-              <div
-                key={room}
-                className="flex justify-between items-center pb-2"
-              >
-                <p className="capitalize">{room.replace("_", " ")}</p>
-                <MdElectricBolt
-                  size={30}
-                  className={`cursor-pointer transition ${
-                    lights[room] ? "text-yellow-500" : "text-gray-400"
-                  }`}
-                  onClick={() => toggleLight(room)}
-                />
-              </div>
-            ))}
-          </main>
-        </div>
+        {/* Lights Card */}
+        <div className="bg-white p-6 shadow-lg rounded-lg ">
+      <div className="flex items-center uppercase pb-5 text-sm space-x-2 mb-4 text-slate-400 font-semibold">
+        <HiLightBulb size={40} className="text-slate-400" />
+        <span>LIGHTS</span>
+      </div>
+      <div className="space-y-8 text-[16px]">
+        {rooms.map((room) => (
+          <div key={room} className="flex justify-between items-center">
+            <span className="text-black">{room}</span>
+            <Switch
+              checked={enabled[room]}
+              onChange={() => toggleSwitch(room)}
+              className={`${
+                  enabled[room] ? "bg-green-500" : "bg-gray-300"
+                } relative inline-flex h-6 w-11 items-center rounded-full`}
+            >
+              <span
+                className={`${
+                  enabled[room] ? "translate-x-6 bg-green-700" : "translate-x-1 bg-white"
+                } inline-block h-4 w-4 transform rounded-full transition`}
+              />
+            </Switch>
+          </div>
+        ))}
+      </div>
+    </div>
       </div>
     </>
   );

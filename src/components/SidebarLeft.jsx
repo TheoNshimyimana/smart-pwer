@@ -20,7 +20,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className="w-80 min-h-screen flex flex-col justify-between relative shadow-xl"
+      className="min-w-72 min-h-screen flex flex-col justify-between relative shadow-xl"
       style={{
         backgroundImage: `url(${sidebarBg})`,
         backgroundSize: "cover",

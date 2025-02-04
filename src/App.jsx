@@ -27,7 +27,7 @@ const App = () => {
           {/* Main Content Below Navbar */}
           <main className=" flex-grow overflow-auto">
             <Routes>
-              <Route path="/login" element={<Login />} />
+              <Route path="/login" element={<Login />} />z
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset-password" element={<ResetPassword />} />
