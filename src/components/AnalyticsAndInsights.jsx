@@ -2,7 +2,7 @@ import { Line, Pie, Bar } from "react-chartjs-2";
 import { Search, Download } from "lucide-react";
 import { useMemo } from "react";
 import Button from "./interface/Button";
-import StatsCard from "./interface/StatsCard";
+import StatsCard from "./interface/statisCard";
 import "chart.js/auto";
 
 import {
